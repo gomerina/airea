@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>big-card</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Mulish:wght@800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto&family=Rozha+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<header class="header">
+	<div class="container">
+		<div class="header-top">
+			<a href="#" class="logo active">A<span class="red">I</span>REA</a>
+			<div class="header-top__wrapper">
+				<form>
+					<div class="header-input__wrapper">
+						<div class="input__burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<input type="search" name="search" class="header-search__input" placeholder="поиск">
+						<button class="search__btn"></button>
+					</div>	
+				</form>
+				<div class="header-top__links">
+					<a href="#" class="header-top__favorites"></a>
+					<a href="#" class="header-top__user"></a>
+					<a href="#" class="header-top__basket"></a>
+					<span class="header-top__value">28100 Руб.</span>
+				</div> 
+			</div>	
+		</div>	
+		<div class="header-bottom active">
+			<span class="header-bottom__location">Санкт-Петербург</span>
+			<span class="header-bottom__title">Бесплатная доставка - Всегда!</span>
+			<div class="header-bottom__aside">
+				<a href="tel:88124158040" class="header-bottom__telephone">8 (812) 415-80-40</a>
+				<a href="tel:88124158040" class="header-bottom__telephone_icon"></a>
+				<span class="header-bottom__time">24/7</span>
+			</div>
+		</div>
+		<div class="modal-catalog">
+			<div class="tabs catalog-tabs">
+				<div class="catalog__adaptive-title">
+					<h2>Каталог товаров</h2>
+					<div class="close-catalog"></div>
+				</div>
+				<ul class="tabs__caption catalog-tabs__caption">
+					<li class="active">Напольные покрытия</li>
+					<li>Двери</li>
+					<li>Освещение</li>
+				</ul>
+				<div class="tabs__content catalog-tabs__content active">
+					<div class="catalog__title">
+						<h2>Напольные покрытия</h2>
+						<div class="close-catalog"></div>
+						<div class="return-catalog"></div>
+					</div>
+					<div class="catalog__items-box">
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Ламинат</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Паркетная доска</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Плинтуса и аксессуары</a></li>
+						</ul>
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Линолеум</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Ковролин</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Искусственная трава</a></li>
+						</ul>
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Плитка ПВХ</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Подложка</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Порожки</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabs__content catalog-tabs__content">
+					<div class="catalog__title">
+						<h2>Двери</h2>
+						<div class="close-catalog"></div>
+						<div class="return-catalog"></div>
+					</div>
+					<div class="catalog__items-box">
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Ламинат</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Паркетная доска</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Плинтуса и аксессуары</a></li>
+						</ul>
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Линолеум</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Ковролин</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Искусственная трава</a></li>
+						</ul>
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Плитка ПВХ</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Подложка</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Порожки</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabs__content catalog-tabs__content">
+					<div class="catalog__title">
+						<h2>Освещение</h2>
+						<div class="close-catalog"></div>
+						<div class="return-catalog"></div>
+					</div>
+					<div class="catalog__items-box">
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Ламинат</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Паркетная доска</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Плинтуса и аксессуары</a></li>
+						</ul>
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Линолеум</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Ковролин</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Искусственная трава</a></li>
+						</ul>
+						<ul class="catalog-list">
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Плитка ПВХ</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Подложка</a></li>
+							<li class="catalog-list__item"><a href="#" class="catalog-list__link">Порожки</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>	<main class="page-body big-card">
+		<div class="container">
+			<ul class="breadcrumbs big-card__breadcrumbs">
+				<li class="breadcrumb__item"><a href="#">Главная</a></li>
+				<li class="breadcrumb__item"><a href="#">Напольные покрытия</a></li>
+				<li class="breadcrumb__item"><a href="#">Ламинат</a></li>
+			</ul>
+			<div class="big-card__wrapper">
+				<div class="big-card__slider-box">
+					<div class="swiper gallery-card">
+						<div class="swiper-wrapper">
+							<div class="gallery-card__item swiper-slide">
+								<img src="img/gallery-img-1.png" alt="">
+							</div>
+							<div class="gallery-card__item swiper-slide">
+								<img src="img/gallery-img-2.png" alt="">
+							</div>
+							<div class="gallery-card__item swiper-slide">
+								<img src="img/gallery-img-2.png" alt="">
+							</div>
+							<div class="gallery-card__item swiper-slide">
+								<img src="img/gallery-img-2.png" alt="">
+							</div>
+							<div class="gallery-card__item swiper-slide">
+								<img src="img/gallery-img-2.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div thumbsSlider="" class="swiper big-card-wrapper">
+						<div class="swiper-wrapper">
+							<div class="big-card__item swiper-slide">
+								<img src="img/big-card-img.png" alt="">
+							</div>
+							<div class="big-card__item swiper-slide">
+								<img src="img/big-card-img.png" alt="">
+							</div>
+							<div class="big-card__item swiper-slide">
+								<img src="img/big-card-img.png" alt="">
+							</div>
+							<div class="big-card__item swiper-slide">
+								<img src="img/big-card-img.png" alt="">
+							</div>
+							<div class="big-card__item swiper-slide">
+								<img src="img/big-card-img.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="big-card__info">
+					<h2 class="big-card__title">Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+					<div class="card-item__stars big-card__stars">
+						<span class="star star-bg"></span>
+						<span class="star star-bg"></span>
+						<span class="star star-bg"></span>
+						<span class="star star-bg"></span>
+						<span class="star star-bg"></span>
+						<a href="#">(15)</a>
+					</div>
+					<div class="big-card__availability">В наличии</div>
+					<div class="big-card__delivery">Доставим 22 июля</div>
+					<div class="big-card__calculator">Калькулятор метража</div>
+					<div class="card-item__deal big-item__deal">
+						<div class="card-item__price">	
+							<s class="old-price">2990 руб.м2</s>
+							<div class="current-price">1990 руб./м2</div>
+						</div>
+						<div class="big-card__favorite"></div>
+						<div class="card-basket"></div>
+					</div>
+					<div class="card-item__bottom">
+						<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+					</div>
+				</div>
+			</div>
+			<div class="big-card__tabs">
+				<ul class="big-card--tabs__caption">
+					<li class="active">Описание</li>
+					<li>Характеристики</li>
+					<li>Отзывы</li>
+				</ul>
+				<div class="big-card--tabs__content description active">
+					<p>Ламинат Artens «Дуб Петра» — многослойное искусственное напольное покрытие, имитирующее натуральную древесину. Ламинат относится к 33-му классу износостойкости, представляет собой напольное покрытие коммерческого типа. Выдерживает интенсивную эксплуатацию в помещениях с высокой проходимостью, имеет усиленную защиту от влаги, грязи, механических воздействий. Страна производства — Россия.</p>
+				</div>
+				<div class="big-card--tabs__content parameters">
+					<div class="parameters__wrapper">
+						<ul class="parameters__list">
+							<li class="parameters__item"><span class="parameter__name">Вес, кг</span></li>
+							<li class="parameters__item"><span class="parameter__value">14.9</span></li>
+						</ul>
+						<ul class="parameters__list">
+							<li class="parameters__item"><span class="parameter__name">Класс</span></li>
+							<li class="parameters__item"><span class="parameter__value">33</span></li>
+						</ul>
+						<ul class="parameters__list">
+							<li class="parameters__item"><span class="parameter__name">Ширина (см)</span></li>
+							<li class="parameters__item"><span class="parameter__value">119.3</span></li>
+						</ul>
+						<ul class="parameters__list">
+							<li class="parameters__item"><span class="parameter__name">Длина (см)</span></li>
+							<li class="parameters__item"><span class="parameter__value">138.0</span></li>
+						</ul>
+						<ul class="parameters__list">
+							<li class="parameters__item"><span class="parameter__name">Толщина (мм)</span></li>
+							<li class="parameters__item"><span class="parameter__value">8.0</span></li>
+						</ul>
+						<ul class="parameters__list">
+							<li class="parameters__item"><span class="parameter__name">Количество в упаковке (в м<sup>2</sup>)</span></li>
+							<li class="parameters__item"><span class="parameter__value">14,9</span></li>
+						</ul>
+						<ul class="parameters__list">
+							<li class="parameters__item"><span class="parameter__name">Количество плашек в упаковке</span></li>
+							<li class="parameters__item"><span class="parameter__value">8.0</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="big-card--tabs__content">
+					<p>Отзывы</p>
+				</div>
+			</div>
+			<div class="big-card__questions">
+				<span>Есть вопрос по этому товару?</span>
+				<a href="#">6 отвеченных вопросов</a>
+			</div>
+			<div class="recommendation-slider__box">
+				<h2>Возможно вам понадобятся:</h2>
+				<div class="recommendation-slider__wrapper">
+					<div class="recommendation__slider">
+						<div class="swiper-wrapper">
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>	
+			</div>
+			<div class="recommendation-slider__box">
+				<h2>Похожие товары:</h2>
+				<div class="recommendation-slider__wrapper">
+					<div class="recommendation__slider">
+						<div class="swiper-wrapper">
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>	
+			</div>
+			<div class="recommendation-slider__box">
+				<h2>Вы смотрели:</h2>
+				<div class="recommendation-slider__wrapper">
+					<div class="recommendation__slider">
+						<div class="swiper-wrapper">
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recommendation__item swiper-slide">								
+								<div class="card-item">
+									<a href="#" class="card-item__link">
+										<div class="card-item__img">
+											<img src="img/card-img-2.png" alt="">
+										</div>
+										<div class="card-item__title">
+											<h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+										</div>
+									</a>	
+									<div class="card-item__info">
+										<div class="card-item__rating">
+											<div class="card-item__stars">
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-bg"></span>
+												<span class="star star-empty"></span>
+												<a href="#">(10)</a>
+											</div>
+											<div class="card-item__favorite"></div>
+										</div>	
+										<div class="card-item__deal">
+											<div class="card-item__price">	
+												<s class="old-price">2990 руб.м2</s>
+												<div class="current-price">1990 руб./м2</div>
+											</div>
+											<div class="card-basket"></div>
+										</div>
+										<div class="card-item__bottom">
+											<span class="square-price">Упаковка 2.31м2 = 2890 руб.</span>
+											<div>
+												<span class="green">33</span> <span class="class-text">класс</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</main>
+<footer class="footer">
+	<div class="container">
+		<ul class="footer-navigation">
+			<li class="footer-navigation__item"><a href="#">О компании</a></li>
+			<li class="footer-navigation__item"><a href="#">Услуги</a></li>
+			<li class="footer-navigation__item"><a href="#">Контакты</a></li>
+		</ul>
+		<div class="footer-bottom">
+			<ul class="footer-cards__list">
+				<li><img src="img/visa.svg" alt=""></li>
+				<li><img src="img/mir.svg" alt=""></li>
+				<li><img src="img/mastercard.svg" alt=""></li>
+			</ul>
+			<ul class="footer-social__list">
+				<li><a href="#" class="footer-social__link telegram"></a></li>
+				<li><a href="#" class="footer-social__link instagram"></a></li>
+				<li><a href="#" class="footer-social__link whatsapp"></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>	<script src="js/jquery.min.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

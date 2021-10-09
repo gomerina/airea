@@ -1,0 +1,5 @@
+@media screen and (max-width: 1210px) {
+  .catalog-filter__item {
+    width: 33.33%;
+  }
+}
