@@ -2,26 +2,13 @@
 $(window).scroll(function() {
 	var height = $(window).scrollTop();
 	if(height > 1){
-		$('.catalog-filter').removeClass('show');
 		$('.header-bottom').removeClass('active');
 		$('.header').addClass('active');
-		$('.page-body').css('padding','197px 0 0 0');
-		$('.modal-catalog').css('margin','0');
-		$('.show-desctope__filter').addClass('active');
-		$('.show-desctope__filter_text').addClass('active');
-		if (window.innerWidth < 1025) {
-			$('.page-body').css('padding','134px 0 0 0');
-		}
+		$('.page-body').css('padding','134px 0 0 0');
 	} else{
-		$('.catalog-filter').addClass('show');
 		$('.header-bottom').addClass('active');
 		$('.header').removeClass('active');
 		$('.page-body').css('padding','0');
-		$('.modal-catalog').css('margin','20px 0 0 0');
-		$('.show-desctope__filter').removeClass('active');
-		$('.show-desctope__filter_text').removeClass('active');
-		$('.catalog-filter').removeClass('fixed');
-		$('.show-desctope__filter_text').text('Открыть фильтры');
 	}
 });
 // ПРОКРУТКА СТРАНИЦЫ ВВЕРХ ПРИ ОБНОВЛЕНИИ 
@@ -39,7 +26,11 @@ $('.show-desctope__filter_text').click(function(){
 		$('.show-desctope__filter_text').css('margin', '0 0 0 3px')
 	}
 })
-
+// ЗАКРЫТЬ ФИЛЬТР НА ДЕСКТОПЕ 
+$('.close-desctope__catalog').click(function(){
+	$('.modal-catalog').removeClass('active');
+	$('.input__burger').removeClass('active');
+})
 // СЛАЙДЕР ДИАПАЗОНА ЗНАЧЕНИЙ
 const rangeSliderPrice = document.getElementById('range-slider');
 if (rangeSliderPrice){
@@ -79,13 +70,28 @@ $('.color-checkbox').click(function(){
 });
 
 // ВЫБОР ЦВЕТА 
-$('#color-setting').click(function(){
-	$(this).find('.dropdown').toggleClass('rotated');
-	$('.color-choose__block').toggleClass('active');
-})
+// $('#color-setting').click(function(){
+// 	$(this).find('.dropdown').toggleClass('rotated');
+// 	$('.color-choose__block').toggleClass('active');
+// })
 $('.color__item-box').on('click',function(){
 	$('.color-input').attr('style', $(this).children('.color__item').attr('style'));
+	$('.color-choose__block.catalog-filter__dropdown').css('display', 'none');
+	$('.catalog-filter__head').removeClass('active');
 })
+
+$(document).ready(function() {
+	$('.catalog-filter__head').click(function(event) {
+		if($('.catalog-filter__item').hasClass('filter-item')){
+			$('.catalog-filter__head').not($(this)).removeClass('active');
+			// $('.catalog-filter__dropdown').next().slideUp(300);
+			$('.catalog-filter__dropdown').not($(this).next()).slideUp(300);
+		}
+		$(this).toggleClass('active').next().slideToggle(300);
+	});
+});
+
+
 
 // ВЫБОР СТРУКТУРЫ
 
@@ -96,7 +102,8 @@ $('.structure-form__inner').click(function(){
 $('.structure__item').on('click',function(){
 	$('.select-structure').text($(this).text());
 	$('.structure__block').removeClass('active');
-	$('.structure-form').find('.dropdown').removeClass('rotated');
+	$('.structure__block.catalog-filter__dropdown').css('display', 'none');
+	$('.catalog-filter__head').removeClass('active');
 })
 
 // ВЫБОР МАТЕРИАЛА
@@ -108,7 +115,8 @@ $('.material-form__inner').click(function(){
 $('.material__item').on('click',function(){
 	$('.select-material').text($(this).text());
 	$('.material__block').removeClass('active');
-	$('.material-form').find('.dropdown').removeClass('rotated');
+	$('.material__block.catalog-filter__dropdown').css('display', 'none');
+	$('.catalog-filter__head').removeClass('active');
 })
 
 // ВЫБОР РАЗМЕРА
@@ -119,7 +127,8 @@ $('.size-form__inner').click(function(){
 $('.size__item').on('click',function(){
 	$('.size-input').val($(this).text());
 	$('.size-block').removeClass('active');
-	$('.size-form').find('.dropdown').removeClass('rotated');
+	$('.size-block.catalog-filter__dropdown').css('display', 'none');
+	$('.catalog-filter__head').removeClass('active');
 })
 
 // ВЫБОР БРЕНДА
@@ -131,8 +140,11 @@ $('.brand-form__inner').click(function(){
 $('.brand__item').on('click',function(){
 	$('.brand-select').text($(this).text());
 	$('.brand-block').removeClass('active');
-	$('.brand-form__inner').find('.dropdown').removeClass('rotated');
+	$('.brand-block.catalog-filter__dropdown').css('display', 'none');
+	$('.catalog-filter__head').removeClass('active');
 })
+
+
 // СОРТИРОВКА 
 $('.sorting-block').click(function(){
 	$('.sorting-choose__block').toggleClass('active');
