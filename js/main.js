@@ -62,36 +62,11 @@ if (rangeSliderPrice){
 	});
 }
 
-// ЧЕКБОКСЫ ЦВЕТА
-$('.color-checkbox').click(function(){
-	if ($(this).is(':checked')) {
-		$('.color-checkbox').not(this).prop('checked', false);
-	}
-});
-
-// ВЫБОР ЦВЕТА 
-// $('#color-setting').click(function(){
-// 	$(this).find('.dropdown').toggleClass('rotated');
-// 	$('.color-choose__block').toggleClass('active');
-// })
-$('.color__item-box').on('click',function(){
-	$('.color-input').attr('style', $(this).children('.color__item').attr('style'));
-	$('.color-choose__block.catalog-filter__dropdown').css('display', 'none');
-	$('.catalog-filter__head').removeClass('active');
-})
-
 $(document).ready(function() {
 	$('.catalog-filter__head').click(function(event) {
-		if($('.catalog-filter__item').hasClass('filter-item')){
-			$('.catalog-filter__head').not($(this)).removeClass('active');
-			// $('.catalog-filter__dropdown').next().slideUp(300);
-			$('.catalog-filter__dropdown').not($(this).next()).slideUp(300);
-		}
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
 });
-
-
 
 // ВЫБОР СТРУКТУРЫ
 
@@ -223,6 +198,8 @@ $('.card-counter .counter-input').bind("change keyup input click", function() {
 // ОТКРЫТЬ ФИЛЬТР НА МОБИЛКЕ
 $('.adaptive__filter').click(function(){
 	$('.catalog-filter').addClass('active');
+	$('.modal-catalog').removeClass('active');
+	$('.input__burger').removeClass('active');
 	$('html').css('overflow', 'hidden');
 })
 // ЗАКРЫТЬ ФИЛЬТР НА МОБИЛКЕ 
@@ -262,6 +239,7 @@ $('.input__burger').click(function(){
 	$('.modal-catalog').toggleClass('active');
 	$('.show-desctope__filter_text').toggleClass('hidden');
 	$('.show-desctope__filter').toggleClass('hidden');
+	$('.catalog-filter').removeClass('active');
 	var height = $(window).scrollTop();
 	if (window.innerWidth < 981) {
 		$('html').css('overflow', 'hidden');
