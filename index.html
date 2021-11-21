@@ -14,7 +14,7 @@
     <header class="header">
         <div class="container">
             <div class="header-top">
-                <a href="#" class="logo active">A<span class="red">I</span>REA</a>
+                <a href="#" class="logo active">a<span class="red">i</span>rea</a>
                 <div class="header-top__wrapper">
                     <form>
                         <div class="header-input__wrapper">
@@ -28,7 +28,9 @@
                         </div>  
                     </form>
                     <div class="header-top__links">
-                        <a href="#" class="header-top__favorites"></a>
+                        <a href="#" class="header-top__favorites">
+                            <span class="header__favorites-indicator">2</span>
+                        </a>
                         <a href="#" class="header-top__user"></a>
                         <a href="#" class="header-top__basket"></a>
                         <span class="header-top__value">28100 Руб.</span>
@@ -137,7 +139,7 @@
             <div class="show-desctope__filter"></div>
             <div class="show-desctope__filter_text">Открыть фильтры</div>
             <div class="catalog-filter__body">
-                <div class="catalog-filter show">
+                <div class="catalog-filter">
                     <div class="close__filter__wrapper">
                         <div class="close__filter"></div>
                     </div>
@@ -198,25 +200,33 @@
                             <div class="filter__settings-inner" id="color-setting">
                                 <div class="catalog-filter__head">
                                     <span>Цвет</span>
-                                    <input type="text" name="" class="color-input" style="background: #E7E5C3;">
                                     <span class="dropdown"></span>
                                 </div>
                                 <div class="color-choose__block catalog-filter__dropdown">
                                     <div class="color__item-box">
-                                        <div class="color__item" style="background: #2400FF;"></div>
-                                        <span>Синий</span>
-                                    </div>  
-                                    <div class="color__item-box">
-                                        <div class="color__item" style="background: #FF5C00;"></div>
-                                        <span>Оранжевый</span>
-                                    </div>  
-                                    <div class="color__item-box">
-                                        <div class="color__item" style="background: #70FF00;"></div>
-                                        <span>Зеленый</span>
-                                    </div>  
-                                    <div class="color__item-box">
-                                        <div class="color__item" style="background: #612B0C;"></div>
-                                        <span>Коричневый</span>
+                                        <div class="control-group control-group__catalog">
+                                            <label class="control control-checkbox">
+                                                Оранжевый
+                                                <input type="checkbox" class="color-checkbox">
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                            <label class="control control-checkbox">
+                                                Коричневый
+                                                <input type="checkbox" class="color-checkbox">
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                            <label class="control control-checkbox">
+                                                Зелёный
+                                                <input type="checkbox" class="color-checkbox">
+                                                <div class="control_indicator"></div>
+                                                <div class="color-block" style="background: green"></div>
+                                            </label>
+                                            <label class="control control-checkbox">
+                                                Синий
+                                                <input type="checkbox" class="color-checkbox">
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </div>
                                     </div>  
                                 </div>
                             </div>
@@ -230,15 +240,33 @@
                                     <span class="dropdown"></span>
                                 </div> 
                                 <div class="structure__block catalog-filter__dropdown">
-                                    <div class="structure__item">Структура 1</div>
-                                    <div class="structure__item">Структура 2</div>
-                                    <div class="structure__item">Структура 3</div>
-                                    <div class="structure__item">Структура 4</div>
+                                    <div class="control-group control-group__catalog">
+                                        <label class="control control-checkbox">
+                                            Структура 1
+                                            <input type="checkbox" class="structure-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-checkbox">
+                                            Структура 2
+                                            <input type="checkbox" class="structure-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-checkbox">
+                                            Структура 3
+                                            <input type="checkbox" class="structure-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-checkbox">
+                                            Структура 4
+                                            <input type="checkbox" class="structure-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                    </div>
                                 </div> 
                             </div>  
                         </form> 
                     </div>
-                    <div class="catalog-filter__item catalog-filter__settings">
+                    <div class="catalog-filter__item catalog-filter__settings checkbox-right">
                         <form>
                             <label class="control control-checkbox chamfer">
                                 Фаска
@@ -249,36 +277,66 @@
                     </div>
                     <div class="catalog-filter__item catalog-filter__settings">
                         <form class="material-form">
-                            <div class="material-form__inner">
-                                <div class="catalog-filter__head">
-                                    <span class="select-material">Дерево</span>
-                                    <span class="dropdown"></span>
+                            <div class="catalog-filter__head">
+                                <span class="select-material">Дерево</span>
+                                <span class="dropdown"></span>
+                            </div>
+                            <div class="material__block catalog-filter__dropdown">
+                                <div class="control-group control-group__catalog">
+                                    <label class="control control-checkbox">
+                                        Дерево 1
+                                        <input type="checkbox" class="material-checkbox">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                    <label class="control control-checkbox">
+                                        Дерево 2
+                                        <input type="checkbox" class="material-checkbox">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                    <label class="control control-checkbox">
+                                        Дерево 3
+                                        <input type="checkbox" class="material-checkbox">
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                    <label class="control control-checkbox">
+                                        Дерево 4
+                                        <input type="checkbox" class="material-checkbox">
+                                        <div class="control_indicator"></div>
+                                    </label>
                                 </div>
-                                <div class="material__block catalog-filter__dropdown">
-                                    <div class="material__item">Дерево 1</div>
-                                    <div class="material__item">Дерево 2</div>
-                                    <div class="material__item">Дерево 3</div>
-                                    <div class="material__item">Дерево 4</div>
-                                </div> 
-                            </div>  
+                            </div> 
                         </form> 
                     </div>
                     <div class="catalog-filter__item catalog-filter__settings">
                         <form class="size-form">
                             <div class="size-form__inner">
                                 <div class="catalog-filter__head">
-                                    <span>Толщина</span>
-                                    <input type="text" name="" value="мм" class="size-input">
+                                    <span>Толщина (мм)</span>
                                     <span class="dropdown"></span>
                                 </div>
                                 <div class="size-block catalog-filter__dropdown">
-                                    <div class="size__item">мм</div>
-                                    <div class="size__item">см</div>
+                                    <div class="control-group control-group__catalog">
+                                        <label class="control control-checkbox">
+                                            7.0
+                                            <input type="checkbox" class="size-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-checkbox">
+                                            8.0
+                                            <input type="checkbox" class="size-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-checkbox">
+                                            12.0
+                                            <input type="checkbox" class="size-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="catalog-filter__item catalog-filter__settings">
+                    <div class="catalog-filter__item catalog-filter__settings checkbox-right">
                         <form>
                             <label class="control control-checkbox water-resist">
                                 Влагостойкость
@@ -295,9 +353,23 @@
                                     <span class="dropdown"></span>
                                 </div>
                                 <div class="brand-block catalog-filter__dropdown">
-                                    <div class="brand__item">Kastomonu</div>
-                                    <div class="brand__item">Kronospan</div>
-                                    <div class="brand__item">Tarkett</div>
+                                    <div class="control-group control-group__catalog">
+                                        <label class="control control-checkbox">
+                                            Kastanomu
+                                            <input type="checkbox" class="size-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-checkbox">
+                                            Kronospan
+                                            <input type="checkbox" class="size-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                        <label class="control control-checkbox">
+                                            Tarkett
+                                            <input type="checkbox" class="size-checkbox">
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -333,10 +405,10 @@
                                 </div>
                             </a>
                             <div class="card-item__inner">
-                                <a href="#" class="card-item__title">
-                                    <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
-                                </a>    
-                                <div class="card-item__info">
+                                <div class="card-item__head">
+                                    <a href="#" class="card-item__title">
+                                        <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+                                    </a>
                                     <div class="card-item__rating">
                                         <div class="card-item__stars">
                                             <span class="star star-bg"></span>
@@ -348,6 +420,8 @@
                                         </div>
                                         <div class="card-item__favorite"></div>
                                     </div>  
+                                </div>      
+                                <div class="card-item__info">  
                                     <div class="card-item__deal">
                                         <div class="card-item__price">  
                                             <div class="current-price"><span class="current-price__value">1990</span> &#8381;/<span class="pack__text">уп</span></div>
@@ -381,10 +455,10 @@
                                 </div>
                             </a>
                             <div class="card-item__inner">
-                                <a href="#" class="card-item__title">
-                                    <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
-                                </a>    
-                                <div class="card-item__info">
+                                <div class="card-item__head">
+                                    <a href="#" class="card-item__title">
+                                        <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+                                    </a>
                                     <div class="card-item__rating">
                                         <div class="card-item__stars">
                                             <span class="star star-bg"></span>
@@ -396,6 +470,8 @@
                                         </div>
                                         <div class="card-item__favorite"></div>
                                     </div>  
+                                </div>      
+                                <div class="card-item__info">  
                                     <div class="card-item__deal">
                                         <div class="card-item__price">  
                                             <div class="current-price"><span class="current-price__value">1990</span> &#8381;/<span class="pack__text">уп</span></div>
@@ -429,10 +505,10 @@
                                 </div>
                             </a>
                             <div class="card-item__inner">
-                                <a href="#" class="card-item__title">
-                                    <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
-                                </a>    
-                                <div class="card-item__info">
+                                <div class="card-item__head">
+                                    <a href="#" class="card-item__title">
+                                        <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+                                    </a>
                                     <div class="card-item__rating">
                                         <div class="card-item__stars">
                                             <span class="star star-bg"></span>
@@ -444,6 +520,8 @@
                                         </div>
                                         <div class="card-item__favorite"></div>
                                     </div>  
+                                </div>      
+                                <div class="card-item__info">  
                                     <div class="card-item__deal">
                                         <div class="card-item__price">  
                                             <div class="current-price"><span class="current-price__value">1990</span> &#8381;/<span class="pack__text">уп</span></div>
@@ -477,10 +555,10 @@
                                 </div>
                             </a>
                             <div class="card-item__inner">
-                                <a href="#" class="card-item__title">
-                                    <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
-                                </a>    
-                                <div class="card-item__info">
+                                <div class="card-item__head">
+                                    <a href="#" class="card-item__title">
+                                        <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+                                    </a>
                                     <div class="card-item__rating">
                                         <div class="card-item__stars">
                                             <span class="star star-bg"></span>
@@ -492,6 +570,8 @@
                                         </div>
                                         <div class="card-item__favorite"></div>
                                     </div>  
+                                </div>      
+                                <div class="card-item__info">  
                                     <div class="card-item__deal">
                                         <div class="card-item__price">  
                                             <div class="current-price"><span class="current-price__value">1990</span> &#8381;/<span class="pack__text">уп</span></div>
@@ -525,10 +605,10 @@
                                 </div>
                             </a>
                             <div class="card-item__inner">
-                                <a href="#" class="card-item__title">
-                                    <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
-                                </a>    
-                                <div class="card-item__info">
+                                <div class="card-item__head">
+                                    <a href="#" class="card-item__title">
+                                        <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+                                    </a>
                                     <div class="card-item__rating">
                                         <div class="card-item__stars">
                                             <span class="star star-bg"></span>
@@ -540,6 +620,8 @@
                                         </div>
                                         <div class="card-item__favorite"></div>
                                     </div>  
+                                </div>      
+                                <div class="card-item__info">  
                                     <div class="card-item__deal">
                                         <div class="card-item__price">  
                                             <div class="current-price"><span class="current-price__value">1990</span> &#8381;/<span class="pack__text">уп</span></div>
@@ -573,10 +655,10 @@
                                 </div>
                             </a>
                             <div class="card-item__inner">
-                                <a href="#" class="card-item__title">
-                                    <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
-                                </a>    
-                                <div class="card-item__info">
+                                <div class="card-item__head">
+                                    <a href="#" class="card-item__title">
+                                        <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+                                    </a>
                                     <div class="card-item__rating">
                                         <div class="card-item__stars">
                                             <span class="star star-bg"></span>
@@ -588,6 +670,8 @@
                                         </div>
                                         <div class="card-item__favorite"></div>
                                     </div>  
+                                </div>      
+                                <div class="card-item__info">  
                                     <div class="card-item__deal">
                                         <div class="card-item__price">  
                                             <div class="current-price"><span class="current-price__value">1990</span> &#8381;/<span class="pack__text">уп</span></div>
@@ -621,10 +705,10 @@
                                 </div>
                             </a>
                             <div class="card-item__inner">
-                                <a href="#" class="card-item__title">
-                                    <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
-                                </a>    
-                                <div class="card-item__info">
+                                <div class="card-item__head">
+                                    <a href="#" class="card-item__title">
+                                        <h2>Ламинат Kastamonu (Кастамону) Ruby Сосна Ренессанс</h2>
+                                    </a>
                                     <div class="card-item__rating">
                                         <div class="card-item__stars">
                                             <span class="star star-bg"></span>
@@ -636,6 +720,8 @@
                                         </div>
                                         <div class="card-item__favorite"></div>
                                     </div>  
+                                </div>      
+                                <div class="card-item__info">  
                                     <div class="card-item__deal">
                                         <div class="card-item__price">  
                                             <div class="current-price"><span class="current-price__value">1990</span> &#8381;/<span class="pack__text">уп</span></div>
@@ -662,6 +748,19 @@
                                 </div>
                             </div>  
                         </div>
+                    </div>
+                    <div class="pagination-box">
+                        <ul class="pagination-list">
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link prev"></a></li>
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link active">1</a></li>
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link">2</a></li>
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link">3</a></li>
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link">4</a></li>
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link">5</a></li>
+                            <li class="pagination__dots">...</li>
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link">99</a></li>
+                            <li class="pagination-list__item"><a href="#" class="pagination-list__link next"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
